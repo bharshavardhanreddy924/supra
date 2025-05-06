@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Supra MK4</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ffcc00, #ff0000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #222;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #cc0000;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #00ff88;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  {% if success %}
+    <div class="message">✅ Your request has been sent. We'll get back to you soon!</div>
+  {% endif %}
+  <form method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+
+  <a href="/" class="back-button">⬅ Back to Showcase</a>
+</body>
+</html>
